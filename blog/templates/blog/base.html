@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
+        <header class="page-header">
+          <div class="container">
+              <h1><a href="/">Django Girls Blog</a></h1>
+          </div>
+        </header>
+       <div>
+        {% block content %}
+        {% endblock %}
+       </div>
+    </body>
+</html>
