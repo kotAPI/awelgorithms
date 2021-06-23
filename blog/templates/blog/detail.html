@@ -1,4 +1,25 @@
 <h1>{{blog.title}}</h1>
-<p>
-    {{ blog.content }}
-</p>
+<div >
+    <p >
+        {{ blog.content.html | safe }}
+    </p>
+</div>
+
+
+<!-- Include your favorite highlight.js stylesheet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/base16/edge-dark.min.css" integrity="sha512-Vm6AWDy6N9X94nUKqOGPqhT6ZkBXPwrEFMKZScrh7m/qJEIHJ4f3d0s1kyF9VoF7pANvd2wVd5pFR5qmgQ6i7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js" integrity="sha512-W7EehcwtSbRF63FIQlXEOOd5mnq0Et0V0nUOvwcUvjnCKgOLLYbqriQxEQSp63sfrkryxIg/A/O8v8O18QwQCQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+hljs.configure({   // optionally configure hljs
+  languages: ['javascript', 'ruby', 'python']
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('.ql-syntax').forEach((el) => {
+    hljs.highlightElement(el);
+  });
+});
+</script>
