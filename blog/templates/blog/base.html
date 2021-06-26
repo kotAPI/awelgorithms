@@ -1,18 +1,29 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Awelgorithms</title>
-    </head>
-    <body>
-        <header class="page-header">
-          <div class="container">
-              <h1><a href="/">Awelgorithms</a></h1>
-          </div>
-        </header>
-       <div>
+
+<head>
+    <title>Awelgorithms</title>
+    <link rel="stylesheet" href="{% static '/css/tailwind-output.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@200;300;400;500;600;700&display=swap');
+        body{
+            font-family: 'Tomorrow', sans-serif;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="flex w-full px-10 py-4">
+            <a href="/">Awelgorithms</a>
+        </div>
+    </header>
+    <div>
         {% block content %}
         {% endblock %}
-       </div>
-    </body>
+    </div>
+</body>
+
 </html>
